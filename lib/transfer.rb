@@ -24,7 +24,6 @@ end
     if @sender.balance > @amount && @status == "pending" && @sender.valid? && @receiver.valid?
       @sender.balance -= @amount 
       @receiver.balance += @amount 
-      @sender.balance
       @status = "complete"
     else 
       @status = "rejected"
